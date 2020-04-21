@@ -1,0 +1,13 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    {% for num in students %} {% if num|divisibleby:2 %}
+    <p>{{num}}</p>
+    {% endif %} {% endfor %}
+</body>
+
+</html>
