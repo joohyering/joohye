@@ -1,0 +1,34 @@
+
+* {margin: 0;
+    padding: 0;}
+a{text-decoration: none;
+    color: #000000;
+    font-size: 20px;}
+
+
+div.c1{margin-top: 100px;
+    width: 480px;
+    float: left;}
+
+    div.c1 ul.c1_date{font-size: 90px;
+        line-height: 75px;
+        text-align: right;
+        font-family: Times, 'Times New Roman', serif;}
+    div.c1 form.add{text-align: right;
+        margin-top: 60px;
+        font-family: Times, 'Times New Roman', serif;}
+
+div.c2{margin-top: 120px;
+    margin-left: 80px;
+    width: 500px;
+    float: left;}
+
+    div.c2 div.c2_ {float: left;
+        width: 500px;}
+
+    div.c2 div.c2_ a.todo_task {display: block;
+        float: left;
+        font-family: Times, 'Times New Roman', serif;}
+    div.c2 div.c2_ a.todo_task a.del {display: block;
+        float: left;
+        font-family: Times, 'Times New Roman', serif;}

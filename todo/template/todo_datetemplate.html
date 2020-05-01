@@ -1,0 +1,44 @@
+
+
+
+<html>
+    {% load static %}
+
+    <head>
+        <link rel="stylesheet" href="{% static 'css/todo_date.css' %}">
+    </head>
+    
+<body>
+    <div class="c1">
+
+        <ul class="c1_date">
+            20200106
+            TODO
+            LIST:
+        </ul>
+
+        <form method="POST" class="add">
+            {% csrf_token %} {{ form.as_p }}
+            <button type="submit">추가</button>
+        </form>
+    </div>
+
+    <div class="c2">
+    {% for todo in todos %}
+        {% if todo.is_done == True %}
+        <div class="c2_"> <s> <a href="{% url 'todo_isdone' pk=todo.pk %}" class="todo_task" style="color: #b5b5b5;">{{ todo.task }}
+            | <a href="{% url 'todo_del' pk=todo.pk %}" class="del" style="color: #b5b5b5;">삭제</a></a> </s> </div>
+        {% endif %}
+        {% if todo.is_done == False %}
+        <div class="c2_"><a href="{% url 'todo_isdone' pk=todo.pk %}" class="todo_task">{{ todo.task }}
+            | <a href="{% url 'todo_del' pk=todo.pk %}" class="del">삭제</a></a></div>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+</body>
+
+
+
+
+</html>

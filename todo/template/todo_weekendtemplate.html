@@ -1,0 +1,52 @@
+<html>
+    {% load static %}
+
+    <head>
+        <link rel="stylesheet" href="{% static 'css/todo_weekend.css' %}">
+    </head>
+    
+<body>
+
+
+    <div class="c3">
+        <div class="c3_1"><img src = "{% static '기하유기_02.jpg' %}" alt="pattern"></div>
+        <div class="c3_2"><img src = "{% static '기하유기_04.jpg' %}" alt="pattern"></div>
+    </div>
+    <div class="c4">
+        <div class="c4_1"><img src = "{% static '기하유기_01.jpg' %}" alt="pattern"></div>
+        <div class="c4_2"><img src = "{% static '기하유기_03.jpg' %}" alt="pattern"></div>
+    </div>
+
+    <div class="c1">
+        <ul class="c1_week">
+            <li>SAT</li>
+            <li>AND</li>
+            <li>SUN</li>
+        </ul>
+
+        <form method="POST" class="add">
+            {% csrf_token %} {{ form.as_p }}
+            <button type="submit">추가</button>
+        </form>
+    </div>
+
+
+    <div class="c2">
+    {% for todo in todos %}
+        {% if todo.weekendis_done == True %}
+        <div class="c2_"><a href="{% url 'todo_isdoneweekend' pk=todo.pk %}" class="todo_task" style="color: #f77061;">{{ todo.weekendtask }}
+            | <a href="{% url 'todo_delweekend' pk=todo.pk %}" class="del" style="color: #f77061;">삭제</a></a></div>
+        {% endif %}
+        {% if todo.weekendis_done == False %}
+        <div class="c2_"><a href="{% url 'todo_isdoneweekend' pk=todo.pk %}" class="todo_task">{{ todo.weekendtask }}
+            | <a href="{% url 'todo_delweekend' pk=todo.pk %}" class="del">삭제</a></a></div>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+</body>
+
+
+
+
+</html>

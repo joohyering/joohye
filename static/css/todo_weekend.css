@@ -1,0 +1,57 @@
+
+* {margin: 0;
+    padding: 0;}
+a{text-decoration: none;
+    color: #ffc71d;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;}
+ol, ul{list-style: none; color: #50b4f4; font-family: Arial, Helvetica, sans-serif;}
+
+
+body{background-color: #f4507b;}
+
+
+div.c3 {margin-top: 180px;
+    margin-left: 190px;
+    width: 180px;
+    height: 360px;
+    float: left;}
+    div.c3 div.c3_1 img{width: 180px; height: 180px; float: left;}
+    div.c3 div.c3_2 img{width: 180px; height: 180px; float: left;}
+    div.c4 {margin-top: 180px;
+        width: 180px;
+        height: 360px;
+        float: left;}
+        div.c4 div.c4_1 img{width: 180px; height: 180px; float: left;}
+        div.c4 div.c4_2 img{width: 180px; height: 180px; float: left;}
+
+
+div.c1{margin-top: 180px;
+    width: 230px;
+    float: left;}
+
+    div.c1 ul.c1_week{font-size: 90px;
+        line-height: 75px;
+        text-align: right;}
+    div.c1 form.add{text-align: right;
+        margin-top: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f4507b;}
+
+
+
+
+div.c2{margin-top: 180px;
+    margin-left: 15px;
+    width: 400px;
+    float: left;}
+
+    div.c2 div.c2_ {float: left;
+        width: 500px;}
+
+    div.c2 div.c2_ a.todo_task {display: block;
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;}
+    div.c2 div.c2_ a.todo_task a.del {display: block;
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;}

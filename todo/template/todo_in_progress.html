@@ -13,7 +13,7 @@
         {% if todo.is_done == False %}
         <thead>
             <tr>
-                <th>{{ todo.task }}</th>
+                <th>{{ todo.task }} | <a href="{% url 'todo_isdone' pk=todo.pk %}">완료</a> </th>
                 <th>{{ todo.is_done }}</th>
             </tr>
         </thead>
@@ -24,8 +24,6 @@
 
 
 </body>
-
-
 
 
 </html>
